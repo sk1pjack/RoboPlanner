@@ -1,0 +1,70 @@
+@if (selectedRobot) {
+<div
+  class="row justify-content-md-left"
+  [class.placeholderClass]="selectedClassPerks?.length === 0"
+>
+  @for(perk of selectedClassPerks; track $index) {
+  <div class="col-md-auto square-col">
+    <div
+      class="square"
+      ngbPopover="{{ perk.description }}"
+      triggers="mouseenter:mouseleave"
+      popoverTitle="{{ perk.name }}"
+      [openDelay]="300"
+      popoverClass="custom-popover"
+      style="cursor: pointer"
+      (click)="onPerkClick($index, perk)"
+    >
+      <img
+        src="assets/images/perks/{{ perk.name }}.png"
+        (error)="handleImageError($event)"
+      />
+    </div>
+  </div>
+  @if(hasSelectedSupportPerks(perk)) {
+  <div class="col-md-auto">
+    @for(perk of supportPerks(perk);track $index) {
+    <div class="row square-small-row">
+      <div
+        class="square-small"
+        ngbPopover="{{ perk.description }}"
+        triggers="mouseenter:mouseleave"
+        popoverTitle="{{ perk.name }}"
+        [openDelay]="300"
+        popoverClass="custom-popover"
+        style="cursor: pointer"
+        (click)="onPerkClick($index, perk)"
+      >
+        <img
+          src="assets/images/perks/{{ perk.name }}.png"
+          (error)="handleImageError($event)"
+        />
+      </div>
+    </div>
+    }
+  </div>
+  } }
+</div>
+<div
+  class="row justify-content-md-left neutral-perk-row"
+  [class.placeholderSupport]="selectedNeutralPerks?.length === 0"
+>
+  @for(perk of selectedNeutralPerks; track $index) {
+  <div
+    class="square-small"
+    ngbPopover="{{ perk.description }}"
+    triggers="mouseenter:mouseleave"
+    popoverTitle="{{ perk.name }}"
+    [openDelay]="300"
+    popoverClass="custom-popover"
+    style="cursor: pointer"
+    (click)="onPerkClick($index, perk)"
+  >
+    <img
+      src="assets/images/perks/{{ perk.name }}.png"
+      (error)="handleImageError($event)"
+    />
+  </div>
+  }
+</div>
+}

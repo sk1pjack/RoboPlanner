@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Size Matters",
+    "type": "common",
+    "description": "Increases weapons magazine size by 25% and energy by 15%. "
+  },
+  {
+    "name": "Quick Trigger",
+    "type": "common",
+    "description": "Increases firerate by 15%."
+  },
+  {
+    "name": "Time Graft",
+    "type": "common",
+    "description": "Reduces primary ability cooldown by 10%. "
+  },
+  {
+    "name": "Dexterity",
+    "type": "common",
+    "description": "Increases reload speed by 15% and movement speed by 6%."
+  },
+  {
+    "name": "Special Trick",
+    "type": "common",
+    "description": "Increases secondary ability damage by 15%."
+  },
+  {
+    "name": "Gluttony",
+    "type": "common",
+    "description": "Increases healing-cells and Repair-o-Bot efficiency by 15%."
+  },
+  {
+    "name": "Chemistry",
+    "type": "common",
+    "description": "Increases elemental damage by 10%."
+  },
+  {
+    "name": "Black Powder",
+    "type": "common",
+    "description": "Increases explosion damage by 10% and their radius by 10%."
+  },
+  {
+    "name": "Sharpened Wits",
+    "type": "common",
+    "description": "Increases critical damage by 10%."
+  }
+]

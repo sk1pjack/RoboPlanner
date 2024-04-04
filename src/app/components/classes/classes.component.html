@@ -1,0 +1,42 @@
+@if(!selectedRobot) {
+<div class="row">
+  <div class="col-lg-2 text-center">
+    <app-class [robot]="guardian"></app-class>
+  </div>
+  <div class="col-lg-2 text-center">
+    <app-class [robot]="commando"></app-class>
+  </div>
+  <div class="col-lg-2 text-center">
+    <app-class [robot]="ranger"></app-class>
+  </div>
+  <div class="col-lg-2 text-center">
+    <app-class [robot]="recon"></app-class>
+  </div>
+  <div class="col-lg-2 text-center">
+    <app-class [robot]="engineer"></app-class>
+  </div>
+  <div class="col-lg-2 text-center">
+    <app-class [robot]="elementalist"></app-class>
+  </div>
+</div>
+} @else {
+<div class="row align-items-center">
+  <div class="col-lg-11 text-left">
+    <br />
+    <h3>
+      <img src="assets/images/{{ selectedRobot }}.png" class="image-small" />
+      &nbsp; {{ selectedRobot }}
+    </h3>
+  </div>
+  <div class="col-lg-1 text-right">
+    <h3>
+      <button
+        type="button"
+        class="btn-close btn-close-white"
+        aria-label="Close"
+        (click)="removeClick()"
+      ></button>
+    </h3>
+  </div>
+</div>
+}

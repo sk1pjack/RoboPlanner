@@ -1,0 +1,84 @@
+@if(selectedRobot) {
+<div class="row"><h3>Class perks:</h3></div>
+<div class="row">
+  @for (perk of classPerks | filterClassPerks; track $index) {
+  <div
+    class="square-small"
+    ngbPopover="{{ perk.description }}"
+    triggers="mouseenter:mouseleave"
+    popoverTitle="{{ perk.name }}"
+    [openDelay]="300"
+    popoverClass="custom-popover"
+    (click)="onPerkClick(perk)"
+    style="cursor: pointer"
+  >
+    <img
+      src="assets/images/perks/{{ perk.name }}.png"
+      (error)="handleImageError($event)"
+      [class.clicked-image]="isPerkSelected(perk.name, this.selectedClassPerks)"
+    />
+  </div>
+  }
+</div>
+@if(selectedClassPerks && selectedClassPerks.length > 0) {
+<div class="row"><h3>Support perks:</h3></div>
+<div class="row">
+  @for(perk of availableSupportPerks; track $index) {
+  <div
+    class="square-small"
+    ngbPopover="{{ perk.description }}"
+    triggers="mouseenter:mouseleave"
+    popoverTitle="{{ perk.name }}"
+    [openDelay]="300"
+    (click)="onPerkClick(perk)"
+    popoverClass="custom-popover"
+    style="cursor: pointer"
+  >
+    <img
+      src="assets/images/perks/{{ perk.name }}.png"
+      (error)="handleImageError($event)"
+      [class.clicked-image]="
+        isPerkSelected(perk.name, this.selectedSupportPerks)
+      "
+    />
+  </div>
+  }
+</div>
+}
+<div class="row"><h3>Neutral perks:</h3></div>
+<div class="row">
+  @for (perk of classPerks | filterNeutralPerks; track $index) {
+  <div
+    class="square-small"
+    ngbPopover="{{ perk.description }}"
+    triggers="mouseenter:mouseleave"
+    popoverTitle="{{ perk.name }}"
+    [openDelay]="300"
+    popoverClass="custom-popover"
+    (click)="onPerkClick(perk)"
+    style="cursor: pointer"
+  >
+    <img
+      src="assets/images/perks/{{ perk.name }}.png"
+      (error)="handleImageError($event)"
+    />
+  </div>
+  } @for (perk of commonPerks; track $index) {
+  <div
+    class="square-small"
+    ngbPopover="{{ perk.description }}"
+    triggers="mouseenter:mouseleave"
+    popoverTitle="{{ perk.name }}"
+    [openDelay]="300"
+    (click)="onPerkClick(perk)"
+    popoverClass="custom-popover"
+    style="cursor: pointer"
+  >
+    <img
+      src="assets/images/perks/{{ perk.name }}.png"
+      (error)="handleImageError($event)"
+    />
+  </div>
+  }
+</div>
+}

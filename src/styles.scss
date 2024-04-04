@@ -1,1 +1,81 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+html { background-color: $dark }
+body { color: white }
+
+.clicked-image {
+  opacity: 0.5; /* Adjust the opacity value as desired */
+}
+
+.square {
+  border-radius: 5px;
+  width: 120px;
+  height: 120px;
+  margin-left:5px;
+  padding-left: 1px;
+  padding-right: 1px;
+  border: 1px solid rgb(194, 194, 194);
+  transition: border-width 0.3s ease; /* Transition effect for border width */
+}
+
+.square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Or use other object-fit values based on your requirements */
+}
+
+.square:hover {
+border-width: 5px; /* Increase border width on hover */
+}
+
+.square-small {
+  border-radius: 5px;
+  width: 59px;
+  height: 59px;
+  border: 1px solid rgb(124, 123, 123);
+  transition: border-width 0.3s ease; /* Transition effect for border width */
+  padding-left: 1px;
+  padding-right: 1px;
+  margin-left:5px;
+}
+
+.square-small:hover {
+  border-width: 5px; /* Increase border width on hover */
+}
+
+.square-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Or use other object-fit values based on your requirements */
+}
+
+.square-col {
+  padding-right: 0px;
+  padding-left: 12px;
+}
+
+.square-small-row {
+  margin-bottom: 2px;
+}
+
+.neutral-perk-row {
+  margin-left: 0px;
+  margin-top: 8px;
+}
+
+.custom-popover {
+  --bs-popover-max-width: 200px;
+  --bs-popover-border-color: white;
+  --bs-popover-header-bg: rgb(54, 54, 54);
+  --bs-popover-header-color: var(--bs-white);
+  --bs-popover-body-padding-x: 1rem;
+  --bs-popover-body-padding-y: .5rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
