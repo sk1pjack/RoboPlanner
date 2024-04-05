@@ -1,0 +1,330 @@
+[
+  {
+    "name": "Rocket Mag",
+    "description": "Grants 1 additional Rocket charge and reduces its cooldown by 1s.",
+    "type": "class",
+    "supportedBy": ["Big Mama", "Rocket Load"]
+  },
+  {
+    "name": "Big Mama",
+    "description": "Every third Rocket, increases its damage by 75% and its explosion radius by 40%.",
+    "type": "support",
+    "supports": "Rocket Mag"
+  },
+  {
+    "name": "Rocket Load",
+    "type": "support",
+    "description": "Hitting an enemy with Shorty reduces Rocket cooldown by 1s.",
+    "supports": "Rocket Mag"
+  },
+  {
+    "name": "Fan of Rockets",
+    "description": "Rocket fires 2 additional projectiles but their damage are decreased by 25%.",
+    "type": "class",
+    "supportedBy": ["More Rockets!", "Happy Load"]
+  },
+  {
+    "name": "More Rockets!",
+    "description": "Further increases Rocket additional projectiles by 2 but decreases their damage by 15%.",
+    "type": "support",
+    "supports": "Fan of Rockets"
+  },
+  {
+    "name": "Happy Load",
+    "type": "support",
+    "description": "Using Rocket has 20% chance to instantly recover its cooldown.",
+    "supports": "Fan of Rockets"
+  },
+  {
+    "name": "Elemental Powder",
+    "description": "Choose an element. Increases damage of that element for each fury point. Rocket and Shorty deal damage of that element.",
+    "choices": ["Pyro Powder", "Cryo Powder", "Electro Powder"],
+    "type": "class",
+    "supportedBy": ["Pyro/Cryo/Electro Punisher", "Vaporize"]
+  },
+  {
+    "name": "Pyro/Cryo/Electro Punisher",
+    "description": "Increases all damage by 20% against burning/cryo/shocked enemies.",
+    "type": "support",
+    "supports": "Elemental Powder"
+  },
+  {
+    "name": "Vaporize",
+    "type": "support",
+    "description": "Elemental damage instantly executes enemies with less than 8% health remaining.",
+    "supports": "Elemental Powder"
+  },
+  {
+    "name": "Warning Rocket",
+    "description": "Using Rocket increases weapons and Shorty damage by 30% for 6s.",
+    "type": "class",
+    "supportedBy": ["Battle Fever", "Wrecking Ball"]
+  },
+  {
+    "name": "Battle Fever",
+    "description": "While Warning Rocket is active, increases weapons and Shorty auto-critical change by 20%.",
+    "type": "support",
+    "supports": "Warning Rocket"
+  },
+  {
+    "name": "Wrecking Ball",
+    "type": "support",
+    "description": "Using Rocket instantly recovers Shorty cooldown.",
+    "supports": "Warning Rocket"
+  },
+  {
+    "name": "Scanning Burst",
+    "description": "Shorty marks enemies and ricochets on 2 enemies, deaking 25% damage.",
+    "type": "class",
+    "supportedBy": ["Triple Bounce", "Family Pack"]
+  },
+  {
+    "name": "Triple Bounce",
+    "description": "Scanning Burst triggers 1 additional ricochet.",
+    "type": "support",
+    "supports": "Scanning Burst"
+  },
+  {
+    "name": "Family Pack",
+    "type": "support",
+    "description": "Increases Scanning Burst ricochet damage to 60%.",
+    "supports": "Scanning Burst"
+  },
+  {
+    "name": "Shorty Prototype",
+    "description": "Choose an improved version of Shorty to replace the current one.",
+    "choices": ["Headhunter", "Wild Burster"],
+    "type": "choice"
+  },
+  {
+    "name": "Headhunter",
+    "description": "Transforms Shorty into Headhunter. It fires a long range shot which can deal critical damage with a x1.75 critical ratio. Dealing critical damage with Shorty instantly recovers its cooldown.",
+    "type": "class",
+    "supportedBy": ["Special Delivery", "Mighty Blow"]
+  },
+  {
+    "name": "Special Delivery",
+    "type": "support",
+    "description": "Increases Scanning Burst ricochet damage to 60%.",
+    "supports": "Headhunter"
+  },
+  {
+    "name": "Mighty Blow",
+    "type": "support",
+    "description": "Increases Shorty auto-critical chance by 10% and its critical damage by 15%.",
+    "supports": "Headhunter"
+  },
+  {
+    "name": "Wild Burster",
+    "description": "Transforms Shorty into Wild Burster. It fires explosive projectiles and deals 15% increased damage.",
+    "type": "class",
+    "supportedBy": ["Suprise Blast", "House Blend"]
+  },
+  {
+    "name": "Suprise Blast",
+    "type": "support",
+    "description": "Using Shorty has 30% chance to instantly recover its cooldown.",
+    "supports": "Wild Burster"
+  },
+  {
+    "name": "House Blend",
+    "type": "support",
+    "description": "Increases Shorty explosion radius by 50%.",
+    "supports": "Wild Burster"
+  },
+  {
+    "name": "Baby Boom",
+    "description": "Explosions have a 40% chance to trigger a second time with 35% increased radius but 35% decreased damage.",
+    "type": "class",
+    "supportedBy": ["Group Discount", "Lucky Powder"]
+  },
+  {
+    "name": "Group Discount",
+    "type": "support",
+    "description": "Increases explosion damage by 30% when hitting multiple enemies. ",
+    "supports": "Baby Boom"
+  },
+  {
+    "name": "Lucky Powder",
+    "type": "support",
+    "description": "Increases explosions auto-critical chance by 15%.",
+    "supports": "Baby Boom"
+  },
+  {
+    "name": "Point Blank",
+    "description": "Increases weapons and Shorty damage by 40% against enemies within 7.5m.",
+    "type": "class",
+    "supportedBy": ["Nose-Breaker", "Frontliner"]
+  },
+  {
+    "name": "Nose-Breaker",
+    "type": "support",
+    "description": "Increases Shorty bonus damage to 80% against enemies within 7.5m.",
+    "supports": "Point Blank"
+  },
+  {
+    "name": "Frontliner",
+    "type": "support",
+    "description": "While at least one enemy is within 7.5m, increases armor by 12%.",
+    "supports": "Point Blank"
+  },
+  {
+    "name": "Repair'O'Fury",
+    "description": "Repairs a part of your scratch damage every second for each fury point.",
+    "type": "class",
+    "supportedBy": ["Full Throttle", "Flawless"]
+  },
+  {
+    "name": "Full Throttle",
+    "type": "support",
+    "description": "While you have no scratch damage, increases firerate and reload speed by 25%.",
+    "supports": "Repair'O'Fury"
+  },
+  {
+    "name": "Flawless",
+    "type": "support",
+    "description": "While you have no scratch damage, increases armor by 12%.",
+    "supports": "Repair'O'Fury"
+  },
+  {
+    "name": "Robzerker",
+    "description": "Taking damage generates 3 fury points and increases your damage by 35% for 6s. ",
+    "type": "class",
+    "supportedBy": ["Abs of Steel", "Retaliation"]
+  },
+  {
+    "name": "Abs of Steel",
+    "type": "support",
+    "description": "While Robzerker is active, increases armor by 16%.",
+    "supports": "Robzerker"
+  },
+  {
+    "name": "Retaliation",
+    "type": "support",
+    "description": "Deals 25 damage and apply high impact to enemies dealing damage to you.",
+    "supports": "Robzerker"
+  },
+  {
+    "name": "Self Control",
+    "description": "Increases maximum fury by 2 points. Generates 2 fury points every 3s. Fury no longer fades over time but taking damage consumes 12 points.",
+    "type": "class",
+    "supportedBy": ["Fighting Pulse", "Stubbornness"]
+  },
+  {
+    "name": "Fighting Pulse",
+    "type": "support",
+    "description": "Increases maximum fury by 2 points. Increases the amount of fury points generated by Self Control by 1. ",
+    "supports": "Self Control"
+  },
+  {
+    "name": "Stubbornness",
+    "type": "support",
+    "description": "Reduces the amount of fury points consumed when taking damage by 6.",
+    "supports": "Self Control"
+  },
+  {
+    "name": "Critical Madness",
+    "description": "Critical damage has 2% chance for each fury point to deal 80% increased damage.",
+    "type": "class",
+    "supportedBy": ["Primal Instinct", "Nitro Shot"]
+  },
+  {
+    "name": "Primal Instinct",
+    "type": "support",
+    "description": "Each fury point increases auto-critical chance by 1%. ",
+    "supports": "Critical Madness"
+  },
+  {
+    "name": "Nitro Shot",
+    "type": "support",
+    "description": "Taking down an enemy with critical damage triggers an explosion dealing 35 damage.",
+    "supports": "Critical Madness"
+  },
+  {
+    "name": "Top Quality",
+    "description": "On first 33% ammo, increases weapons damage by 30%.",
+    "type": "class",
+    "supportedBy": ["Top 50", "Lucky Ammo"]
+  },
+  {
+    "name": "Top 50",
+    "type": "support",
+    "description": "Increases Top Quality activation threshold to first 50% ammo.",
+    "supports": "Top Quality"
+  },
+  {
+    "name": "Lucky Ammo",
+    "type": "support",
+    "description": "While Top Quality is active, increases weapons auto-critical chance by 20%.",
+    "supports": "Top Quality"
+  },
+  {
+    "name": "Tempo Shot",
+    "description": "Every 4 shots increases your next weapon shot damage by 60%. ",
+    "type": "class",
+    "supportedBy": ["Sharpshooter", "Power of Three"]
+  },
+  {
+    "name": "Sharpshooter",
+    "type": "support",
+    "description": "Tempo Shot shot has 100% auto-critical chance. ",
+    "supports": "Tempo Shot"
+  },
+  {
+    "name": "Power of Three",
+    "type": "support",
+    "description": "Reduces the number of shots required to trigger Tempo Shot to 3. ",
+    "supports": "Tempo Shot"
+  },
+  {
+    "name": "Mini-Missiles",
+    "description": "Effects generating fury also generate a charge (max. 10). Shooting consumes a charge to fire one explosive homing projectile dealing 18 damage. ",
+    "type": "class",
+    "supportedBy": ["Chromatic Firework", "Firework Generator"]
+  },
+  {
+    "name": "Chromatic Firework",
+    "type": "support",
+    "description": "Choose an element. Mini-Missiles deals damage of that element.",
+    "supports": "Mini-Missiles"
+  },
+  {
+    "name": "Firework Generator",
+    "type": "support",
+    "description": "Automatically generates a charge every 1s. ",
+    "supports": "Mini-Missiles"
+  },
+  {
+    "name": "Hot Potato",
+    "description": "Increases weapon damage by 25% but reduces your weapon slots by 1. Every 4s, your next reload is instant and throws an explosive grenade dealing 60 damage. ",
+    "type": "class",
+    "supportedBy": ["Full Price", "Tactical Pocket"]
+  },
+  {
+    "name": "Full Price",
+    "type": "support",
+    "description": "Increases Hot Potato throw damage by 25% and its explosion radius by 25%.",
+    "supports": "Hot Potato"
+  },
+  {
+    "name": "Tactical Pocket",
+    "type": "support",
+    "description": "Reduces Hot Potato cooldown to 2s.",
+    "supports": "Hot Potato"
+  },
+  {
+    "name": "Rocket Powder",
+    "type": "neutral",
+    "description": "Increases Rocket damage by 20%."
+  },
+  {
+    "name": "Unchained",
+    "type": "neutral",
+    "description": "Increases maximum fury by 3 points."
+  },
+  {
+    "name": "Smooth Cannon",
+    "type": "neutral",
+    "description": "Reduces Shorty cooldown by 1s and increases its attack speed by 15%."
+  }
+]
