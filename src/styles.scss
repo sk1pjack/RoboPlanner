@@ -5,11 +5,23 @@
 
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 
-html { background-color: $dark }
+html { background-color: $dark;}
 body { color: white }
 
 .clicked-image {
   opacity: 0.5; /* Adjust the opacity value as desired */
+}
+
+.robo-font {
+  font-family: robo;
+}
+
+.text-margin {
+  margin-top: 12px;
+}
+
+.icon-margin {
+  margin-left: -5px;
 }
 
 .square {
@@ -17,6 +29,7 @@ body { color: white }
   width: 120px;
   height: 120px;
   margin-left:5px;
+  margin-bottom:2px;
   padding-left: 1px;
   padding-right: 1px;
   border: 1px solid rgb(194, 194, 194);
@@ -79,3 +92,9 @@ border-width: 5px; /* Increase border width on hover */
   padding-right: 0;
 }
 
+@font-face {
+  font-family: 'robo';
+  src: url('/assets/fonts/SFTransRobotics.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

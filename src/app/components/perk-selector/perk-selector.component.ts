@@ -4,7 +4,7 @@ import { Robot } from '../../models/classes.enum';
 import jsonCommonPerks from '../../../assets/perks/common.json';
 import jsonCommandoPerks from '../../../assets/perks/Commando.json';
 import { Perk } from '../../models/perk.model';
-import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbPopoverModule, NgbTooltip } from '@ng-bootstrap/ng-bootstrap';
 import { ClassPerkPipe } from '../../pipes/class-perk.pipe';
 import { NeutralPerkPipe } from '../../pipes/neutral-perk.pipe';
 import { PerkService } from '../../services/perk.service';
@@ -12,7 +12,7 @@ import { PerkService } from '../../services/perk.service';
 @Component({
   selector: 'app-perk-selector',
   standalone: true,
-  imports: [NgbPopoverModule, ClassPerkPipe, NeutralPerkPipe],
+  imports: [NgbPopoverModule, ClassPerkPipe, NeutralPerkPipe, NgbTooltip],
   templateUrl: './perk-selector.component.html',
   styleUrl: './perk-selector.component.scss'
 })

@@ -1,13 +1,15 @@
 @if(selectedRobot) {
-<div class="row"><h3>Class perks:</h3></div>
-<div class="row">
+<div class="row robo-font text-margin justify-content-md-left">
+  <h3>Class perks</h3>
+</div>
+<div class="row icon-margin">
   @for (perk of classPerks | filterClassPerks; track $index) {
   <div
     class="square-small"
     ngbPopover="{{ perk.description }}"
     triggers="mouseenter:mouseleave"
     popoverTitle="{{ perk.name }}"
-    [openDelay]="300"
+    [openDelay]="100"
     popoverClass="custom-popover"
     (click)="onPerkClick(perk)"
     style="cursor: pointer"
@@ -20,16 +22,19 @@
   </div>
   }
 </div>
-@if(selectedClassPerks && selectedClassPerks.length > 0) {
-<div class="row"><h3>Support perks:</h3></div>
-<div class="row">
-  @for(perk of availableSupportPerks; track $index) {
+<div class="row robo-font text-margin"><h3>Support perks</h3></div>
+<div
+  class="row icon-margin"
+  [class.placeholderIconSupport]="selectedClassPerks?.length === 0"
+>
+  @if(selectedClassPerks && selectedClassPerks.length > 0) { @for(perk of
+  availableSupportPerks; track $index) {
   <div
     class="square-small"
     ngbPopover="{{ perk.description }}"
     triggers="mouseenter:mouseleave"
     popoverTitle="{{ perk.name }}"
-    [openDelay]="300"
+    [openDelay]="100"
     (click)="onPerkClick(perk)"
     popoverClass="custom-popover"
     style="cursor: pointer"
@@ -42,18 +47,17 @@
       "
     />
   </div>
-  }
+  } }
 </div>
-}
-<div class="row"><h3>Neutral perks:</h3></div>
-<div class="row">
+<div class="row robo-font text-margin"><h3>Neutral perks</h3></div>
+<div class="row icon-margin">
   @for (perk of classPerks | filterNeutralPerks; track $index) {
   <div
     class="square-small"
     ngbPopover="{{ perk.description }}"
     triggers="mouseenter:mouseleave"
     popoverTitle="{{ perk.name }}"
-    [openDelay]="300"
+    [openDelay]="100"
     popoverClass="custom-popover"
     (click)="onPerkClick(perk)"
     style="cursor: pointer"
@@ -69,7 +73,7 @@
     ngbPopover="{{ perk.description }}"
     triggers="mouseenter:mouseleave"
     popoverTitle="{{ perk.name }}"
-    [openDelay]="300"
+    [openDelay]="100"
     (click)="onPerkClick(perk)"
     popoverClass="custom-popover"
     style="cursor: pointer"
